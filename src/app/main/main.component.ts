@@ -42,7 +42,10 @@ export class MainComponent {
   }
 
   forScrolling(value: string): void {
-    this.viewport.scrollToAnchor(value);
+    setTimeout(() => {
+      
+      this.viewport.scrollToAnchor(value);
+    }, 3000);
   }
   @HostListener('window:scroll')
   checkScroll() {

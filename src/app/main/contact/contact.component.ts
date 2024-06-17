@@ -76,7 +76,9 @@ submitted: boolean = false;
     if(this.loginForm.valid) {   
       const studentList: any[] = this.getLocalStorge();
       console.log("ABC",this.loginForm.value);
-      
+      this.loginForm.value.id = this.studentList.length
+      ? Math.max(...this.studentList.map((s: any) => s.id)) + 1
+      : 1;
       studentList.push(this.loginForm.value)
       localStorage.setItem('Loginform', JSON.stringify(studentList)); 
       this.forSer.forContact.next(this.getLocalStorge().slice(-3))
@@ -96,7 +98,6 @@ submitted: boolean = false;
     this.submitted = false
     this.hide = true
     this.loginForm.reset()
-    // this.loginForm.n
   }
 
 }

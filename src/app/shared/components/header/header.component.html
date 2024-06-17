@@ -13,7 +13,7 @@
             <li>
               <a
                 class="nav-link scrollto active"
-                href="#"
+                routerLink="/main"
                 (click)="forScrolling(item.link, $event)"
                 [class.active]="Activated(item.link.substring(1))"
                 >{{ item.label }}</a
@@ -50,7 +50,7 @@
 
           <ng-container *ngIf="!item.dropdown && last">
             <li>
-              <a class="getstarted scrollto" href="{{ item.Link }}">{{
+                <a class="getstarted scrollto" href="{{ item.Link }}" routerLink="/main" >{{
                 item.label
               }}</a>
             </li>

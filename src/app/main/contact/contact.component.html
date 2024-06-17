@@ -79,7 +79,7 @@
               <div class="col-md-6 form-group">
                 <label for="Gender" class="form-label"> </label>
                 <select formControlName="gender" name="" id="Gender" style="width: 270px; height: 40px;"
-                  class="bg-white"
+                  class="bg-white"  class="form-control"
                   [ngClass]="{'is-invalid' :(loginForm.get('gender')?.touched && loginForm.get('gender')?.hasError('required') )|| (submitted && loginForm.get('gender')?.errors )}">
                   <option value="" disabled hidden>select a Gender</option>
                   <option value="Male">Male</option>
