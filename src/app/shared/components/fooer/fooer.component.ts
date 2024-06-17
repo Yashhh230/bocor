@@ -11,6 +11,7 @@ export class FooerComponent implements OnInit {
   /* 
   *this is for the form variable
   */
+  submit = false
   forSubscribe !: any
   footerList:any = {}
   constructor(public main: ForfooterService) {}
@@ -38,6 +39,7 @@ export class FooerComponent implements OnInit {
   *this can validate user and if the user is already subscribe then print the error messsage otherwise it will push the object
   */
   sub() {
+    this.submit = true
     if (this.forSubscribe.valid) {
       const studentList: any = JSON.parse(localStorage.getItem('subscriberForm') || '[]');
       const emailValue = this.forSubscribe.get('email')?.value;

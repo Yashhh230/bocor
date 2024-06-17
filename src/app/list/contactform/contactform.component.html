@@ -47,9 +47,39 @@
         </tbody>
       </table>
     </div>
-    <div class="text-center">
-        <button type="button" class="btn btn-dark" (click)="backTopage()">Back</button>
+   
+  </section>
+  <section class="selected-record-section">
+    <div class="container">
+      <h4 class="text-center">All Record</h4>
+      <table class="table table-bordered mb-5 mt-5 shadow-lg">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Email</th>
+            <th scope="col">Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Message</th>
+            <th scope="col">Subject</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let item of mainList; index as i">
+            <tr>
+              <td>{{item.id}}</td>
+              <td>{{item.email}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.gender}}</td>
+              <td>{{item.message}}</td>
+              <td>{{item.subject}}</td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
     </div>
+    <div class="text-center">
+      <button type="button" class="btn btn-dark" (click)="backTopage()">Back</button>
+  </div>
   </section>
   
 

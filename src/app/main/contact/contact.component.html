@@ -37,7 +37,7 @@
           <form class="php-email-form w-100 shadow-lg" [formGroup]="loginForm" (ngSubmit)="onSubmit()"
             data-aos="fade-up">
             <div class="row mb-2">
-              <div class="col-md-6 form-group">
+              <div class="col-md-6 form-group mt-3 mt-md-0">
                 <input type="text" name="name" formControlName="name" class="form-control" id="name"
                   placeholder="Your Name"
                   [ngClass]="{'is-invalid' :(loginForm.get('name')?.touched && loginForm.get('name')?.hasError('required') )|| (submitted && loginForm.get('name')?.errors )}">
@@ -64,7 +64,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6 form-group">
+              <div class="col-md-6 form-group  mt-3 mt-md-0">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
                   formControlName="subject"
                   [ngClass]="{'is-invalid' :(loginForm.get('subject')?.touched && loginForm.get('subject')?.hasError('required') )|| (submitted && loginForm.get('subject')?.errors )}">
@@ -76,24 +76,24 @@
                   </small>
                 </small>
               </div>
-              <div class="col-md-6 form-group">
+              <div class="col-md-6 form-group  mt-3 mt-md-0">
                 <label for="Gender" class="form-label"> </label>
                 <select formControlName="gender" name="" id="Gender" style="width: 270px; height: 40px;"
                   class="bg-white"  class="form-control"
                   [ngClass]="{'is-invalid' :(loginForm.get('gender')?.touched && loginForm.get('gender')?.hasError('required') )|| (submitted && loginForm.get('gender')?.errors )}">
-                  <option value="" disabled hidden>select a Gender</option>
+                  <option value="" selected>select a Gender</option>
                   <option value="Male">Male</option>
                   <option value="Female" selected>Female</option>
                   <option value="Other">Other</option>
                 </select>
                 <small
                   *ngIf="(loginForm.get('gender')?.touched && loginForm.get('gender')?.errors?.['required'] )|| submitted ">
-                  <small class="text-danger" *ngIf="loginForm.get('gender')?.touched&&loginForm.get('gender')?.errors?.['required']">
+                  <small class="text-danger" *ngIf="(loginForm.get('gender')?.touched && loginForm.get('gender')?.errors?.['required'] )|| submitted">
                     gender field is required
                   </small>
                 </small>
               </div>
-              <div class="form-group mt-3">
+              <div class="form-group mt-3  mt-3 mt-md-0">
 
                 <textarea formControlName="message" class="form-control" name="message" rows="5" placeholder="Message"
                   required

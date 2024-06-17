@@ -34,7 +34,7 @@ submitted: boolean = false;
   /**this is the login form  */
   forLogin() {
     this.loginForm = new FormGroup({
-      id: new FormControl(Date.now()),
+      id: new FormControl(),
       name: new FormControl("", Validators.required),
       email: new FormControl("", [Validators.required, Validators.email]),
       subject: new FormControl("", Validators.required),
@@ -76,9 +76,9 @@ submitted: boolean = false;
     if(this.loginForm.valid) {   
       const studentList: any[] = this.getLocalStorge();
       console.log("ABC",this.loginForm.value);
-      this.loginForm.value.id = this.studentList.length
-      ? Math.max(...this.studentList.map((s: any) => s.id)) + 1
-      : 1;
+      this.loginForm.value.id = this.getLocalStorge()? Math.max(...this.getLocalStorge().map((s: any) => s.id)) + 1
+        : 1;
+      console.log(this.loginForm.value.id,"this.loginform")
       studentList.push(this.loginForm.value)
       localStorage.setItem('Loginform', JSON.stringify(studentList)); 
       this.forSer.forContact.next(this.getLocalStorge().slice(-3))

@@ -1,12 +1,30 @@
 
 button {
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-    font-size: 25px;
-    text-align: center;
-    border-radius: 30px;
-    outline: none;
-    z-index: 2;
-    background: rgb(173, 173, 248);
-  }
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  font-size: 20px;
+  text-align: center;
+  outline: none;
+  background: #213b52;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  z-index: 2;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #fdc134;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}

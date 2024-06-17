@@ -22,6 +22,7 @@ export class ContactformComponent implements OnInit {
   /**
    * this is the selected id for matching 
    */
+  mainList:any= []
   forselectedid:any 
   ngOnInit(): void {
     this.route.params.subscribe({
@@ -55,8 +56,8 @@ export class ContactformComponent implements OnInit {
   getLocalStorge() { 
     let value = localStorage.getItem('Loginform')
     if (value) {
-      let list = JSON.parse(value)
-      this.List = list.slice(-3)
+      this.mainList = JSON.parse(value)
+      this.List = this.mainList.slice(-3)
     }
   }
 
