@@ -1,0 +1,34 @@
+<section class="faq section-bg shadow-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h4 class="text-center">Category</h4>
+        <ng-container *ngFor="let li of categoryList">
+          <button type="button" class="ps-3 fs-5 shadow-lg list-group-item list-group-item-action border border-2  mb-2"
+          [ngClass]="{'highlighted': forCat == li}" (click)="categoryChange(li)">{{li}}</button>
+        </ng-container>
+      </div>  
+
+      <div class="col-md-7">
+        <h4 class="text-center">category List</h4>
+        <ng-container *ngFor="let i of filterCategoryList">
+          <div ngbAccordion [closeOthers]="true">
+            <div ngbAccordionItem [collapsed]="i !== '{{i.label}}'">
+              <h2 ngbAccordionHeader>
+                <button ngbAccordionButton>{{i.label}}</button>
+              </h2>
+              <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                  <ng-template>
+                    {{i.Ans}}
+                  </ng-template>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <button type="button" class="btn btn-dark" (click)="back()">Back</button>
+  </div>
+</section>

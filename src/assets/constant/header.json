@@ -1,0 +1,46 @@
+[
+  {
+    "label": "Home",
+    "link": "#home"
+  },
+  {
+    "label": "About us",
+    "link": "#about"
+  },
+  {
+    "label": "Services",
+    "link": "#service"
+  },
+  {
+    "label": "Portfolio",
+    "link": "#portfolio"
+  },
+  {
+    "label": "team",
+    "link": "#team"
+  },
+  {
+    "label": "List",
+    "dropdown": [
+      {
+        "label": "subscriberList",
+        "link": "/list/subscriber"
+      },
+      {
+        "label": "contactList",
+        "link": "/list/contact"
+      }
+    ]
+  },
+  {
+    "label": "contact",
+    "link": "#contact"
+  },
+  {
+ "label": "Get Started",
+    "Link": "#Home"
+  }
+]
+
+
+ 

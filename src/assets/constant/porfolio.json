@@ -1,0 +1,531 @@
+{
+    "title":"Portfolio",
+    "smallltitle":"Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.",
+    "filters":[
+        "all",
+        "app",
+        "card",
+        "web"
+    ],
+    "cards":[
+        {
+        "imageUrl":"../../assets/img/portfolio/portfolio-1.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 1",
+                "link": "assets/img/portfolio/portfolio-1.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 1",
+            "category":"app"
+        }
+    }, {
+        "imageUrl":"../../assets/img/portfolio/portfolio-2.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "Web 3",
+                "link": "assets/img/portfolio/portfolio-2.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "Web 3",
+            "category":"web"
+        }
+    }, {
+        "imageUrl": "../../assets/img/portfolio/portfolio-3.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 2",
+                "link": "../../assets/img/portfolio/portfolio-3.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 3",
+            "category": "app"
+        }
+    },{
+        "imageUrl": "../../assets/img/portfolio/portfolio-4.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "Card 2",
+                "link": "../../assets/img/portfolio/portfolio-4.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "Card 2",
+            "category": "card"
+        }
+    },
+    {
+        "imageUrl": "../../assets/img/portfolio/portfolio-5.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "Web 2",
+                "link": "assets/img/portfolio/portfolio-5.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "Web 2",
+            "category": "web"
+        }
+    },
+    {
+        "imageUrl": "assets/img/portfolio/portfolio-6.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 2",
+                "link": "assets/img/portfolio/portfolio-6.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 2",
+            "category": "app"
+        }
+    },
+    {
+        "imageUrl": "assets/img/portfolio/portfolio-6.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 2",
+                "link": "assets/img/portfolio/portfolio-6.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 2",
+            "category": "app"
+        }
+    }, {
+        "imageUrl":"../../assets/img/portfolio/portfolio-1.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 1",
+                "link": "assets/img/portfolio/portfolio-1.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 1",
+            "category":"app"
+        }
+    }, {
+        "imageUrl":"../../assets/img/portfolio/portfolio-2.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "Web 3",
+                "link": "assets/img/portfolio/portfolio-2.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "Web 3",
+            "category":"web"
+        }
+    }, {
+        "imageUrl": "../../assets/img/portfolio/portfolio-3.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 2",
+                "link": "../../assets/img/portfolio/portfolio-3.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 3",
+            "category": "app"
+        }
+    },{
+        "imageUrl": "../../assets/img/portfolio/portfolio-4.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "Card 2",
+                "link": "../../assets/img/portfolio/portfolio-4.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "Card 2",
+            "category": "card"
+        }
+    },
+    {
+        "imageUrl": "../../assets/img/portfolio/portfolio-5.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "Web 2",
+                "link": "assets/img/portfolio/portfolio-5.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "Web 2",
+            "category": "web"
+        }
+    },
+    {
+        "imageUrl": "assets/img/portfolio/portfolio-6.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 2",
+                "link": "assets/img/portfolio/portfolio-6.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 2",
+            "category": "app"
+        }
+    },
+    {
+        "imageUrl": "assets/img/portfolio/portfolio-6.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 2",
+                "link": "assets/img/portfolio/portfolio-6.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 2",
+            "category": "app"
+        }
+    }, {
+        "imageUrl":"../../assets/img/portfolio/portfolio-1.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 1",
+                "link": "assets/img/portfolio/portfolio-1.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 1",
+            "category":"app"
+        }
+    }, {
+        "imageUrl":"../../assets/img/portfolio/portfolio-2.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "Web 3",
+                "link": "assets/img/portfolio/portfolio-2.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "Web 3",
+            "category":"web"
+        }
+    }, {
+        "imageUrl": "../../assets/img/portfolio/portfolio-3.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 2",
+                "link": "../../assets/img/portfolio/portfolio-3.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 3",
+            "category": "app"
+        }
+    },{
+        "imageUrl": "../../assets/img/portfolio/portfolio-4.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "Card 2",
+                "link": "../../assets/img/portfolio/portfolio-4.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "Card 2",
+            "category": "card"
+        }
+    },
+    {
+        "imageUrl": "../../assets/img/portfolio/portfolio-5.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "Web 2",
+                "link": "assets/img/portfolio/portfolio-5.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "Web 2",
+            "category": "web"
+        }
+    },
+    {
+        "imageUrl": "assets/img/portfolio/portfolio-6.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 2",
+                "link": "assets/img/portfolio/portfolio-6.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 2",
+            "category": "app"
+        }
+    },
+    {
+        "imageUrl": "assets/img/portfolio/portfolio-6.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 2",
+                "link": "assets/img/portfolio/portfolio-6.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 2",
+            "category": "app"
+        }
+    },
+    {
+        "imageUrl":"../../assets/img/portfolio/portfolio-1.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 1",
+                "link": "assets/img/portfolio/portfolio-1.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 1",
+            "category":"app"
+        }
+    }, {
+        "imageUrl":"../../assets/img/portfolio/portfolio-2.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "Web 3",
+                "link": "assets/img/portfolio/portfolio-2.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "Web 3",
+            "category":"web"
+        }
+    }, {
+        "imageUrl": "../../assets/img/portfolio/portfolio-3.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 2",
+                "link": "../../assets/img/portfolio/portfolio-3.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 3",
+            "category": "app"
+        }
+    },{
+        "imageUrl": "../../assets/img/portfolio/portfolio-4.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "Card 2",
+                "link": "../../assets/img/portfolio/portfolio-4.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "Card 2",
+            "category": "card"
+        }
+    },
+    {
+        "imageUrl": "../../assets/img/portfolio/portfolio-5.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "Web 2",
+                "link": "assets/img/portfolio/portfolio-5.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "Web 2",
+            "category": "web"
+        }
+    },
+    {
+        "imageUrl": "assets/img/portfolio/portfolio-6.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 2",
+                "link": "assets/img/portfolio/portfolio-6.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 2",
+            "category": "app"
+        }
+    },
+    {
+        "imageUrl": "assets/img/portfolio/portfolio-6.jpg",
+        "url": [
+            {
+                "images": "plus",
+                "title": "App 2",
+                "link": "assets/img/portfolio/portfolio-6.jpg"
+            },
+            {
+                "Redirect": "link",
+                "forTitle": "More Details",
+                "forHtml": "portfolio-details.html"
+            }
+        ],
+        "forunique": {
+            "title": "App 2",
+            "category": "app"
+        }
+    }
+    
+]
+}

@@ -1,0 +1,64 @@
+<section id="features" class="features section-bg">
+    <div class="container">
+
+        <div class="section-title">
+            <h2 data-aos="fade-in">Features</h2>
+            <p data-aos="fade-in">{{forFeatures.label}}</p>
+        </div>
+
+
+        <ng-container *ngFor="let features of forFeatures.main;let odd= odd ;let even = even">
+            <ng-container *ngIf="even">
+                <div class="row content">
+                    <div class="col-md-5" data-aos="fade-right">
+                        <img [src]="features.URL" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-7 pt-4" data-aos="fade-left">
+                        <h3>{{features.mainText}}</h3>
+                        <p class="fst-italic">
+                            {{features.smallText}}
+                        </p>
+                        <ng-container *ngIf="features.sections">
+                            <ng-container *ngFor="let fea of features.sections">
+                                <ul>
+                                    <li><i class="bi bi-check"></i>{{fea.label}}</li>
+                                </ul>
+                            </ng-container>
+                        </ng-container>
+                        <ng-container *ngIf="!features.sections">
+                            <p>{{features.leagal}}</p>
+                        </ng-container>
+                    </div>
+                </div>
+                </ng-container>
+                <ng-container *ngIf="odd">
+                    <div class="row content">
+                        <div class="col-md-5 order-1 order-md-2" data-aos="fade-left">
+                            <img [src]="features.URL" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-7 pt-5 order-2 order-md-1" data-aos="fade-right">
+                            <h3>{{features.mainText}}</h3>
+                            <p class="fst-italic">
+                                {{features.smallText}}
+                            </p>
+                            <ng-container *ngIf="features.sections">
+                                <ng-container *ngFor="let fea of features.sections">
+                                    <ul>
+                                        <li><i class="bi bi-check"></i>{{fea.label}}</li>
+                                    </ul>
+                                </ng-container>
+                            </ng-container>
+                            <ng-container *ngIf="!features.sections">
+                                <p>{{features.leagal}}</p>
+                            </ng-container>
+                        </div>
+                    </div>
+                </ng-container>
+            </ng-container>
+     
+
+
+
+
+
+    </div>

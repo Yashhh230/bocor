@@ -1,0 +1,63 @@
+<header id="header">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="logo">
+      <h1>
+        <a href="index.html">Bocor<span>.</span></a>
+      </h1>
+    </div>
+    
+    <nav id="navbar" class="navbar" [ngClass]="show?'navbar-mobile':''">
+      <ul>
+      <ng-container *ngFor="let item of headerData; let last = last">
+          <ng-container *ngIf="!item.dropdown && !last">
+            <li>
+              <a
+                class="nav-link scrollto active"
+                href="#"
+                (click)="forScrolling(item.link, $event)"
+                [class.active]="Activated(item.link.substring(1))"
+                >{{ item.label }}</a
+              >
+            </li>
+          </ng-container>
+
+          <ng-container *ngIf="item.dropdown">
+            <li class="dropdown nav-link scrollto active">
+              <a><span>{{ item.label }}</span> <i class="bi bi-chevron-down"></i
+              ></a>
+              <ul>
+                <ng-container *ngFor="let items of item.dropdown">
+                  <li *ngIf="items.label == 'subscriberList'">
+                    <a routerLink="/list/subscriber"
+                     
+                      >{{ items.label }}</a
+                    > 
+                  </li>
+                  <li class="dropdown" *ngIf="items.label == 'contactList'">
+                    <a>{{ items.label }} <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                      <li *ngFor="let contact of forSer.forContact.value">
+                        <a routerLink="/list/contact/{{ contact.id }}"
+                          >Hello Mr.{{ contact.name }}</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ng-container>
+              </ul>
+            </li>
+          </ng-container>
+
+          <ng-container *ngIf="!item.dropdown && last">
+            <li>
+              <a class="getstarted scrollto" href="{{ item.Link }}">{{
+                item.label
+              }}</a>
+            </li>
+          </ng-container>
+        </ng-container>
+      </ul>
+      <i class="bi mobile-nav-toggle"  (click)="forOpen()" [ngClass]="show?'bi-x':'bi-list'"></i>
+    </nav>
+  </div>
+</header>

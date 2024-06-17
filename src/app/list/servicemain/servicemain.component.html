@@ -1,0 +1,36 @@
+<section id="services" class="services section-bg">
+    <div class="container">
+      <ng-container *ngFor="let item of forService ">
+        <div class="section-title">
+          <h2 data-aos="fade-in">Services</h2>
+          <p data-aos="fade-in">{{item.title}}</p>
+        </div>
+        <div class="row">
+          <ng-container *ngFor="let items of item.card.slice((page-1) * pageSize, page * pageSize)">
+            <div class="col-md-6 d-flex" data-aos="fade-right">
+              <div class="card">
+                <div class="card-img">
+                  <img src="{{items.Url}}" alt="...">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"><a href="">{{items.mainHeading}}</a></h5>
+                  <p class="card-text">{{items.heading}}</p>
+                  <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                </div>
+              </div>
+            </div>
+  
+          </ng-container>
+        </div>
+        
+        <div class="text-center">
+          <ngb-pagination [(page)]="page"
+                  [pageSize]="pageSize"
+                  [collectionSize]="item.card.length" />
+        </div>
+        <div class="text-center">
+          <button type="button" class="btn btn-dark" (click)="load()">Back</button>
+        </div>
+      </ng-container>
+  </div>
+</section>

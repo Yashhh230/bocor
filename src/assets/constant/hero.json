@@ -1,0 +1,23 @@
+[
+    {
+        "mainText":"Your new digital experience with Bocor",
+       "smallText":"We are team of talented designers making websites with Bootstrap",
+       "label":"Get Started",
+       "URl":"../../assets/hero-img.png"
+       },
+
+    {
+        "mainText":"Your new digital experience with Bocor",
+       "smallText":"We are team of talented designers making websites with Bootstrap",
+       "label":"Get Started",
+       "VideoURl":"../../assets/videos/yash.mp4"
+    }, 
+    {
+        "mainText":"Your new digital experience with Bocor",
+       "smallText":"We are team of talented designers making websites with Bootstrap",
+       "label":"Get Started",
+       "URl":"../../assets/hero-img.png"
+       }
+
+
+ ]

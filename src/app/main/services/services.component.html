@@ -1,0 +1,80 @@
+<section id="services" class="services section-bg">
+  <div class="container">
+    <ng-container *ngFor="let item of forService">
+      <div class="section-title">
+        <h2 data-aos="fade-in">Services</h2>
+        <p data-aos="fade-in">{{item.title}}</p>
+      </div>
+      <div class="row">
+        <ng-container *ngFor="let items of item.card index as i ">
+          <div class="col-md-6 d-flex" data-aos="fade-right" *ngIf="i<4" >
+            <div class="card">
+              <div class="card-img">
+                <img src="{{items.Url}}" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">{{items.mainHeading}}</a></h5>
+                <p class="card-text">{{items.heading}}</p>
+                <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+              </div>
+            </div>
+          </div>
+
+        </ng-container>
+      </div>
+      <div class="text-center">
+        <div class="mb-5">
+          <button type="button" class="btn btn-warning" (click)="loadmore()">View more</button>
+        </div>
+       
+      </div>
+    </ng-container>
+
+
+    <!-- <div class="col-md-6 d-flex" data-aos="fade-left">
+          <div class="card">
+            <div class="card-img">
+              <img src="assets/img/services-2.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a href="">Aperiores voluptates</a></h5>
+              <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque
+                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                vitae dicta sunt explicabo</p>
+              <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-6 d-flex" data-aos="fade-right">
+          <div class="card">
+            <div class="card-img">
+              <img src="assets/img/services-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a href="">Veritatis natus nisi</a></h5>
+              <p class="card-text">Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni
+                dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia
+                dolor sit amet</p>
+              <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex" data-aos="fade-left">
+          <div class="card">
+            <div class="card-img">
+              <img src="assets/img/services-4.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"><a href="">Aliquam veritatis</a></h5>
+              <p class="card-text">Nostrum eum sed et autem dolorum perspiciatis. Magni porro quisquam laudantium
+                voluptatem. In molestiae earum ab sit esse voluptatem. Eos ipsam cumque ipsum officiis qui nihil aut
+                incidunt aut</p>
+              <div class="read-more"><a href="#"><i class="bi bi-arrow-right"></i> Read More</a></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+  </div>
+</section>

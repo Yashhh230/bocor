@@ -1,0 +1,29 @@
+<section id="hero">
+  <ngb-carousel>
+    <ng-container *ngFor="let item of forImage" >
+      <ng-template ngbSlide>
+      <div>
+        <div class="container">
+          <div class="row d-flex align-items-center">
+            <div class="col-lg-6 py-5 py-lg-0 order-2 order-lg-1" data-aos="fade-right">
+              <h1>{{item.mainText}}</h1>
+              <h2>{{item.smallText}}</h2>
+              <a href="#about" class="btn-get-started scrollto">{{item.label}}</a>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+              <ng-container *ngIf="!item.VideoURl; else videoUrl">
+                <img [src]="item.URl" class="img-fluid" alt="">
+              </ng-container>
+              <ng-template #videoUrl>
+                <video controls class="m-5" height="500px" width="500px" (click)="func2(video.height, video.width)" #video>
+                  <source [src]="item.VideoURl"  type="video/mp4" />
+                </video>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    </ng-container>
+  </ngb-carousel>
+</section>

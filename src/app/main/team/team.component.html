@@ -1,0 +1,29 @@
+<section id="team" class="team section-bg">
+  <div class="container">
+    <ng-container>
+      <div class="section-title">
+        <h2 data-aos="fade-in">Team</h2>
+        <p data-aos="fade-in">{{forTeamService.title}}</p>
+      </div>
+      <div class="row">
+        <ng-container *ngFor="let item of forTeamService.teamMember ; index as i ">
+          <div class="col-xl-3 col-lg-4 col-md-6" *ngIf="i<4">
+            <div class="member" data-aos="fade-up">
+              <div class="pic"><img src="{{item.Url}}" alt=""></div>
+              <h4>{{item.name}}</h4>
+              <span>{{item.position}}</span>
+              <div class="social">
+                <ng-container *ngFor="let i of item.img">
+                  <a href=""><i class="bi bi-{{i.title}}"></i></a>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+  <div class="text-center">
+    <button type="button" class="btn btn-warning" (click)="forView()">view more</button>
+  </div>
+</section>

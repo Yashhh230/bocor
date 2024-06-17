@@ -1,0 +1,30 @@
+<section id="about" class="about section-bg">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="image col-xl-5"></div>
+
+          <div class="col-xl-7">
+            <div class="content d-flex flex-column justify-content-center ps-0 ps-xl-4">
+              <h3 data-aos="fade-in" data-aos-delay="100">{{mainList.mainLabel}}</h3>
+              <p data-aos="fade-in">
+                {{(mainList?.smallLabel1|slice:0:50)}}
+              </p>
+              <ng-template #tpl></ng-template>
+              <div *ngIf="showMore" style="cursor: pointer; color: blue;" (click)="showsMore(mainList.smallLabel1)">
+              ...Show More
+              </div>
+              <div class="row gy-4 mt-3">
+                  <ng-container *ngFor="let datas of mainList.labels">
+                  <div class="col-md-6 icon-box" data-aos="fade-up">
+                    <i class="bx bx-{{datas.img}}"></i>
+                    <h4><a href="#">{{datas.labelFor}}</a></h4>
+                    <p>{{datas.smallLabel}}</p>
+                  </div>
+                </ng-container>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section><!-- End About Section -->
+

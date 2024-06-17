@@ -1,0 +1,26 @@
+<h3 class="text-center"> Subscriber List </h3>
+
+<div class="container-fluid">
+
+
+  <table class="table table-bordered mb-5 mt-5">
+      <thead>
+        <tr>
+          <th scope="col">number</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+          <ng-container *ngFor="let item of List ; index as i ">
+        <tr>
+              <th scope="row">{{i+1}}</th>
+              <td>{{item.email}}</td>
+          </tr>
+      </ng-container>
+      </tbody>
+    </table>
+    <div class="text-center mb-5">
+
+      <button type="button" class="btn btn-dark" (click)="clickbutton()">Back</button>
+    </div>
+</div>

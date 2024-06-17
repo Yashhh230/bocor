@@ -1,0 +1,158 @@
+<section id="contact" class="contact section-bg">
+  <div class="container" data-aos="fade-up">
+
+    <ng-container *ngFor="let item of forClient">
+      <div class="section-title">
+        <h2>Contact</h2>
+        <p>{{item.title}}</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="info-box" data-aos="fade-up">
+                <i class="bx bx-map"></i>
+                <h3>{{item.address}}</h3>
+                <p>{{item.main}}</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
+                <i class="bx bx-envelope"></i>
+                <h3>Email Us</h3>
+                <p>{{item.Email1}}<br>{{item.Email2}}</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
+                <i class="bx bx-phone-call"></i>
+                <h3>Call Us</h3>
+                <p>{{item.call}}<br>{{item.call2}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mt-4 mt-lg-0" *ngIf="hide">
+          <form class="php-email-form w-100 shadow-lg" [formGroup]="loginForm" (ngSubmit)="onSubmit()"
+            data-aos="fade-up">
+            <div class="row mb-2">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" formControlName="name" class="form-control" id="name"
+                  placeholder="Your Name"
+                  [ngClass]="{'is-invalid' :(loginForm.get('name')?.touched && loginForm.get('name')?.hasError('required') )|| (submitted && loginForm.get('name')?.errors )}">
+                <small
+                  *ngIf="(loginForm.get('name')?.touched && loginForm.get('name')?.hasError('required') )|| (submitted && loginForm.get('name')?.errors )">
+                  <small class="text-danger"
+                    *ngIf="(loginForm.get('name')?.touched && loginForm.get('name')?.hasError('required') )|| (submitted && loginForm.get('name')?.errors )">
+                    Name field is required
+                  </small>
+                </small>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" formControlName="email" name="email" id="email"
+                  placeholder="Your Email"
+                  [ngClass]="{'is-invalid' :(loginForm.get('email')?.touched && loginForm.get('email')?.hasError('required') )|| (submitted && loginForm.get('email')?.errors )}">
+                <small class="text-danger" *ngIf="
+                  (loginForm.get('email')?.touched || submitted) &&
+                  loginForm.get('email')?.hasError('required')
+                ">Email is required</small>
+                <small class="text-danger" *ngIf="
+                  (loginForm.get('email')?.touched || submitted) &&
+                  loginForm.get('email')?.hasError('email')
+                ">Email is not valid</small>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                  formControlName="subject"
+                  [ngClass]="{'is-invalid' :(loginForm.get('subject')?.touched && loginForm.get('subject')?.hasError('required') )|| (submitted && loginForm.get('subject')?.errors )}">
+                <small
+                  *ngIf="(loginForm.get('subject')?.touched && loginForm.get('subject')?.hasError('required') )|| (submitted && loginForm.get('subject')?.errors )">
+                  <small class="text-danger"
+                    *ngIf="(loginForm.get('subject')?.touched && loginForm.get('subject')?.hasError('required') )|| (submitted && loginForm.get('subject')?.errors )">
+                    subject field is required
+                  </small>
+                </small>
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="Gender" class="form-label"> </label>
+                <select formControlName="gender" name="" id="Gender" style="width: 270px; height: 40px;"
+                  class="bg-white"
+                  [ngClass]="{'is-invalid' :(loginForm.get('gender')?.touched && loginForm.get('gender')?.hasError('required') )|| (submitted && loginForm.get('gender')?.errors )}">
+                  <option value="" disabled hidden>select a Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female" selected>Female</option>
+                  <option value="Other">Other</option>
+                </select>
+                <small
+                  *ngIf="(loginForm.get('gender')?.touched && loginForm.get('gender')?.errors?.['required'] )|| submitted ">
+                  <small class="text-danger" *ngIf="loginForm.get('gender')?.touched&&loginForm.get('gender')?.errors?.['required']">
+                    gender field is required
+                  </small>
+                </small>
+              </div>
+              <div class="form-group mt-3">
+
+                <textarea formControlName="message" class="form-control" name="message" rows="5" placeholder="Message"
+                  required
+                  [ngClass]="{'is-invalid' :(loginForm.get('message')?.touched && loginForm.get('message')?.hasError('required') )|| (submitted && loginForm.get('message')?.errors )}"></textarea>
+                <small
+                  *ngIf="(loginForm.get('message')?.touched && loginForm.get('message')?.errors?.['required'] )|| submitted ">
+                  <small class="text-danger" *ngIf=" loginForm.get('message')?.errors?.['required']  ">
+                    message field is required
+                  </small>
+                </small>
+              </div>
+              <div class="my-3">
+                <div class="error-message"></div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0" *ngIf="!hide">
+          <div class="sent-message text-white bg-success text-center mb-4">Your message has been sent. Thank you!</div>
+          <table class="table table-bordered border-2">
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Gender</th>
+            </tr>
+            <tr>
+              <td>{{this.loginForm.controls.name.value}}</td>
+              <td>{{this.loginForm.controls.email.value}}</td>
+              <td>{{this.loginForm.controls.gender.value}}</td>
+            </tr>
+          </table>
+          <hr>
+          <table class="table table-bordered">
+            <tr>
+              <th>subject</th>
+            </tr>
+            <tr>
+              <td>
+                {{this.loginForm.controls.subject.value}}
+              </td>
+            </tr>
+          </table>
+          <hr>
+          <table class="table table-bordered">
+            <tr>
+              <th>Message</th>
+            </tr>
+            <tr>
+              <td>
+                {{this.loginForm.controls.message.value}}
+              </td>
+            </tr>
+            <div class="text-center">
+              <button type="button" class="btn btn-dark" (click)="clickbutton()">Back</button>
+            </div>
+          </table>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</section>

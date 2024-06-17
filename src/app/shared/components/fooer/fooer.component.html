@@ -1,0 +1,91 @@
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <h3>{{ footerList.title }}</h3>
+          <p>{{ footerList.main }}.</p>
+        </div>
+      </div>
+
+      <div class="row footer-newsletter justify-content-center">
+        <div class="col-lg-6">
+          <form
+            action=""
+            [formGroup]="forSubscribe"
+            method="post"
+            (ngSubmit)="sub()"
+          >
+            <input
+              type="email"
+              name="email"
+              formControlName="email"
+              placeholder="Enter your Email"
+              [ngClass]="{
+                'is-invalid':
+                  (forSubscribe.get('email')?.touched &&
+                    forSubscribe.get('email')?.hasError('required')) ||
+                  forSubscribe.get('email')?.errors
+              }"
+            />
+            <input type="submit" value="Subscribe" />
+          </form>
+          <span
+            class="text-danger"
+            *ngIf="
+              forSubscribe.get('email')?.hasError('required') &&
+              forSubscribe.get('email')?.touched
+            "
+          >
+            Email field is required
+          </span>
+          <span
+            class="text-danger"
+            *ngIf="
+              forSubscribe.get('email')?.hasError('email') &&
+              !forSubscribe.get('email')?.hasError('required') &&
+              forSubscribe.get('email')?.touched
+            "
+          >
+            please Enter proper Email .
+          </span>
+          <span
+            class="text-danger"
+            *ngIf="
+              forSubscribe.get('email')?.hasError('alreadyhave') &&
+              !forSubscribe.get('email')?.hasError('required') &&
+              forSubscribe.get('email')?.touched
+            "
+          >
+            This email is already subscribed
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <ng-container *ngFor="let list of footerList.images">
+        <a href="#" class="{{ list.label }}"
+          ><i class="bx bxl-{{ list.label }}"></i
+        ></a>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="container footer-bottom clearfix">
+    <div class="copyright">
+      &copy; {{ footerList.footer }}
+      <strong
+        ><span>{{ footerList.title }}</span></strong
+      >. {{ footerList.forfooter }}
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/ -->
+      {{ footerList.forsmall }}
+      <a href="https://bootstrapmade.com/">{{ footerList.forbig }}</a>
+    </div>
+  </div>
+</footer>

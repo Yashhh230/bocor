@@ -1,0 +1,24 @@
+<section id="faq" class="faq section-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-aos="fade-in">Frequently Asked Questions</h2>
+        <p data-aos="fade-in">{{faqList.title}}</p>
+      </div>
+      <ng-container *ngFor="let items of faqList.QA">
+        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up">
+          <div class="col-lg-5">
+            <i class="bx bx-help-circle"></i>
+            <h4>{{items.label}}</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              {{items.Ans}}
+            </p>
+          </div>
+        </div>
+      </ng-container>
+    <div class="text-center">
+      <button type="button" class="btn btn-warning" (click)="forMore()">view more</button>
+    </div>
+    </div>
+  </section>
