@@ -65,9 +65,9 @@ export class FaqforComponent {
    * this will help to change the question of category for the user
    */
   categoryChange(li: any) {
-
-    this.filterCategoryList = this.faqList.QA.filter((e: any) => {
-     this.forCat ===li 
+      
+    this.forCat =li 
+    this.filterCategoryList = this.faqList.QA.filter((e: any) => {      
      return e.category === li
     })
   }

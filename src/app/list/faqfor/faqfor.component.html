@@ -10,7 +10,7 @@
       </div>  
 
       <div class="col-md-7">
-        <h4 class="text-center">category List</h4>
+        <h4 class="text-center">{{forCat}}</h4>
         <ng-container *ngFor="let i of filterCategoryList">
           <div ngbAccordion [closeOthers]="true">
             <div ngbAccordionItem [collapsed]="i !== '{{i.label}}'">
