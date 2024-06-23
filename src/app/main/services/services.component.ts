@@ -15,7 +15,7 @@ export class ServicesComponent implements OnInit {
    * this will for the service array
    * 
    */
-  forService: any[] = []
+  forService: any = {}
   forSlice: any[] = []
   
   forOnly = 4

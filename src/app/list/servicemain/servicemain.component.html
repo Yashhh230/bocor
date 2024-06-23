@@ -1,12 +1,11 @@
 <section id="services" class="services section-bg">
     <div class="container">
-      <ng-container *ngFor="let item of forService ">
         <div class="section-title">
           <h2 data-aos="fade-in">Services</h2>
-          <p data-aos="fade-in">{{item.title}}</p>
+          <p data-aos="fade-in">{{forService.title}}</p>
         </div>
         <div class="row">
-          <ng-container *ngFor="let items of item.card.slice((page-1) * pageSize, page * pageSize)">
+          <ng-container *ngFor="let items of forService.card">
             <div class="col-md-6 d-flex" data-aos="fade-right">
               <div class="card">
                 <div class="card-img">
@@ -26,11 +25,10 @@
         <div class="text-center">
           <ngb-pagination [(page)]="page"
                   [pageSize]="pageSize"
-                  [collectionSize]="item.card.length" />
+                  [collectionSize]="collectionSize" (pageChange)="forApiCall()" />
         </div>
         <div class="text-center">
           <button type="button" class="btn btn-dark" (click)="load()">Back</button>
         </div>
-      </ng-container>
   </div>
 </section>

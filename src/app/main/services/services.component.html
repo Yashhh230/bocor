@@ -1,12 +1,11 @@
 <section id="services" class="services section-bg">
   <div class="container">
-    <ng-container *ngFor="let item of forService">
       <div class="section-title">
         <h2 data-aos="fade-in">Services</h2>
-        <p data-aos="fade-in">{{item.title}}</p>
+        <p data-aos="fade-in">{{forService.title}}</p>
       </div>
       <div class="row">
-        <ng-container *ngFor="let items of item.card index as i ">
+        <ng-container *ngFor="let items of forService.card index as i ">
           <div class="col-md-6 d-flex" data-aos="fade-right" *ngIf="i<4" >
             <div class="card">
               <div class="card-img">
@@ -28,7 +27,6 @@
         </div>
        
       </div>
-    </ng-container>
 
 
     <!-- <div class="col-md-6 d-flex" data-aos="fade-left">

@@ -13,21 +13,40 @@ export class ServicemainComponent {
  * this will be page size and starting page
  *  */  
 page= 1;
-pageSize = 4;
+  pageSize = 4;
+  collectionSize = 1
   constructor(public main: ForserviceService , public route : Router) { }
-  forService: any[] = []
+  forService: any = {}
   ngOnInit(): void {
-    this.serviceData()
+    // this.serviceData()
+    this.forApiCall()
   }
 
   /**
    * this will help to store the data and show using api call 
    * 
    */
-  serviceData() {
+  // serviceData() {
+  //   this.main.forData().subscribe({
+  //     next: (res:any) => {
+  //       this.forService = res  
+  //     },
+  //     error: (err:any) => {
+  //     },
+  //     complete: () => {
+  //     }
+  //   })
+  // }
+
+  forApiCall() {
     this.main.forData().subscribe({
       next: (res:any) => {
-        this.forService = res  
+        this.forService = res
+        // .slice
+        this.collectionSize = res.card.length
+        this.forService.card = res.card.slice((this.page-1) * this.pageSize, this.page * this.pageSize)
+        
+        console.log(res,"hello")
       },
       error: (err:any) => {
       },

@@ -39,7 +39,7 @@ export class PortfolioComponent {
    * this can filter categories by particulary click
    * @param filter this can help to filter categories
    */
-  filters(filter: any, list: HTMLElement) {
+  filters(filter: any) {
     if (filter === 'all') {
       this.forFilter = this.forportfolio.cards;
     } else if (filter === 'app') {

@@ -14,7 +14,9 @@ export class TeamsComponent {
    * this will be forteamservice object to show the all details
    */
   forTeamService: any = {}
-
+  images = 1
+  pageSize = 4 
+  page = 1 
   /**
    * this is the team array
    */
@@ -23,31 +25,37 @@ export class TeamsComponent {
   ngOnInit(): void {
     this.forTeamData()
   }
-/**
- * this will subscribe the data and generate the result using api call
- */
-  forTeamData() {
-    this.main.forTeam().subscribe({
-      next: (res: any) => {
-        this.forTeamService = res
-        this.forGenerate()
-      },
-      error: (err: any) => {
-      },
-      complete: () => {
-      }
-    })
+  /**
+   * this will subscribe the data and generate the result using api call
+   */
+  forTeamData(data: boolean = false) {
+    if (this.images > this.forTeamService?.teamMember?.length) {
+      this.main.forTeam().subscribe({
+        next: (res: any) => {
+          if (data) {
+            this.forTeamService?.teamMember.push(...res?.teamMember.slice(this.forTeamService?.teamMember.length,this.pageSize * this.page) )   
+          }
+          else {
+            this.forTeamService = res
+            console.log(res,"res")
+            this.images = res?.teamMember.length
+            this.forTeamService.teamMember = res?.teamMember.slice(0, this.pageSize)
+          }
+        },
+        error: (err: any) => {
+        },
+        complete: () => {
+        }
+      })
+    }
   }
   Back() {
     this.route.navigate(['/main'])
   }
   @HostListener("window:scroll", [])
   forGenerate(): void {
-    if (this.forTeamService?.teamMember.length <40) {
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 300) {
-        this.Teams = [...this.Teams, ...this.forTeamService?.teamMember.slice(this.index, this.index + 4)];
-        this.index+=4
-      }
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 300) {
+      this.forTeamData(true)
     }
   }
 }
